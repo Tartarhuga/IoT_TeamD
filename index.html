@@ -105,17 +105,17 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title publication-title">
-    <span class="title-text">IoT Project Name </span>
+    <span class="title-text">M.A.B.I.T.E</span>
   </h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                    <a href="https://github.com/zubair1811" target="_blank">FRANKLIN PINTO DE ALMEIDA</a><sup>1</sup>,
+                    <a href="https://github.com/Tartarhuga" target="_blank">FRANKLIN PINTO DE ALMEIDA</a><sup>1</sup>,
                     <span class="author-block">
-                      <a href="https://github.com/zubair1811" target="_blank">KWINCY RIGOBERT</a><sup>2</sup>,
+                      <a href="https://github.com/ThaFreshKwinc" target="_blank">KWINCY RIGOBERT</a><sup>2</sup>,
                     </span>
                     <span class="author-block">
-                      <a href="https://github.com/zubair1811" target="_blank">NICOLAS THORREZ</a><sup>3</sup>
+                      <a href="https://github.com/nclsthrz" target="_blank">NICOLAS THORREZ</a><sup>3</sup>
                     </span>  </br>
                     <span class="author-block">
                       <a href="https://github.com/zubair1811"  target="_blank">Class Incharge: Muhammad Zubair Islam</a><sup>4</sup>,
@@ -127,9 +127,9 @@
                 </br>
                 <div class="is-size-5 publication-authors">
                 <div style="text-align: center; margin-bottom: 5px;">
-                    <span class="author-block"><sup>1</sup> Sejong University, Department of </span> </br>
-                    <span class="author-block"><sup>2</sup> Sejong University, Department of </span> </br>
-                    <span class="author-block"><sup>3</sup> Sejong University, Department of </span> </br>
+                    <span class="author-block"><sup>1</sup> Sejong University, Department of AI and Data Engineering</span> </br>
+                    <span class="author-block"><sup>2</sup> Sejong University, Department of AI and Data Engineering</span> </br>
+                    <span class="author-block"><sup>3</sup> Sejong University, Department of AI and Data Engineering</span> </br>
                     <span class="author-block"><sup>4</sup> Sejong University, Department of AI and Robotics</span>
                 </div>
             </div>
@@ -142,7 +142,7 @@
 
                     <!-- Project Slides -->
                     <span class="link-block">
-                        <a href="https://github.com/zubair1811" target="_blank"
+                        <a href="https://github.com/Tartarhuga" target="_blank"
                            class="external-link button is-normal is-rounded is-dark">
                             <span class="icon">
                                 <i class="fas fa-file-alt" style="color: #D3D3D3;"></i>
@@ -154,7 +154,7 @@
 
                     <!-- Github link -->
                     <span class="link-block">
-                        <a href="https://github.com/zubair1811/IoT-Project.git" target="_blank"
+                        <a href="https://github.com/Tartarhuga/IoT_TeamA" target="_blank"
                            class="external-link button is-normal is-rounded is-dark">
                             <span class="icon">
                                 <i class="fab fa-github" style="color: black;"></i>
@@ -210,12 +210,13 @@
            Overview
          </h2>
         <div class="content has-text-justified">
-            Overview of Smart IoT Pet Feeding.
-            <strong>(Feeding Automation)</strong>: Ensures pets are fed consistently and on time.
-            <span style="color: #ff69b4;">(Scheduled Feeding):</span> Simplifies meal times with automated schedules for pets 
-            <span style="color: #007bff;">(Weight Monitoring)</span>, Tracks food consumption for better pet health management 
+          This section presents my contribution to the M.A.B.I.T.E project through the implementation of a 
+          <strong>Simon Says memory game</strong> on an ESP32-based system.<br><br>
+          <span style="color: #ff69b4;">(Memory Training)</span>: Challenges the player’s short-term memory by requiring the reproduction of increasingly complex LED and sound sequences. <br><br>
+          <span style="color: #007bff;">(Interactive Feedback)</span>: Combines visual cues (LEDs), audio signals (buzzer), and user input (buttons) to reinforce cognitive engagement and learning.<br><br>
+          <span style="color: #28a745;">(Progressive Difficulty)</span>: Automatically increases complexity as the player succeeds, ensuring a continuous and adaptive cognitive challenge.<br><br>
           </p>
-          <img src="static/images/Plan.png" alt="Teaser GIF" height="100%">
+          <img src="static/images/Plan.png" alt="Simon Says system overview" height="100%">
           <p class="subtitle has-text-centered">
         </div>
       </div>
@@ -223,6 +224,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- End paper abstract -->
 
@@ -234,41 +236,101 @@
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="content">
-         <h2 class="title is-3" style="background: linear-gradient(45deg, #f200b571, #eb419f8e, #0077ff5b, #2881cad7); color: white; padding: 10px; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); text-align: center;">
-           Method
-         </h2>
-          <div class="content has-text-justified" style="font-size: 4.5 rem;"></div>
-          <strong>Overview of Smart IoT Pet Feeding.</strong>
-          <strong>Feeding Automation</strong> 
-          <strong>Scheduled Feeding</strong> 
-           <strong>Weight Monitoring</strong> 
+          <h2 class="title is-3" style="background: linear-gradient(45deg, #f200b571, #eb419f8e, #0077ff5b, #2881cad7); color: white; padding: 10px; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); text-align: center;">
+            Method
+          </h2>
+
+          <div class="content has-text-justified">
+            This section describes the methodology used to design and implement the
+            <strong>Simon Says memory game</strong> within the M.A.B.I.T.E project.
+
+            <br><br>
+
+            <strong>Hardware Integration:</strong>  
+            The game is implemented on an ESP32 microcontroller and uses four LEDs, four
+            corresponding push buttons, a buzzer, and an OLED display. Each LED-button pair
+            represents a unique input channel, allowing intuitive user interaction.
+
+            <br><br>
+
+            <strong>Game Architecture:</strong>  
+            The software follows a state-based architecture. A sequence of random values is
+            generated and stored in memory. At each new round, one additional element is
+            appended to the sequence, increasing the difficulty progressively.
+
+            <br><br>
+
+            <strong>Interaction and Feedback:</strong>  
+            The system provides immediate multimodal feedback. Visual feedback is delivered
+            through LEDs, while audio feedback is produced by the buzzer. Player inputs are
+            validated step by step to ensure accurate sequence reproduction.
+
+            <br><br>
+
+            <strong>Performance Evaluation:</strong>  
+            The player’s performance is measured by the maximum sequence length successfully
+            reproduced. This value is used as the final score and compared to the best score
+            recorded during the session.
           </div>
-          </p>
-          </p>
-          <div style="text-align: center;">
-          <img src="static/images/Plan2.png" alt="MY ALT TEXT" style="display: block; width: 100%; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+
+          <div style="text-align: center; margin-top: 30px;">
+            <img src="static/images/Plan2.png" alt="Simon Says methodology overview"
+                 style="display: block; width: 100%; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
           </div>
-      
-      </p>
-      <div style="text-align: center;">
-      </p>
-      </div>   
+
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3" style="background: linear-gradient(45deg, #f200b571, #eb419f8e, #0077ff5b, #2881cad7); color: white; padding: 10px; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); text-align: center;">
+            Demo
+          </h2>
 
+          <div class="content has-text-justified">
+            This demonstration presents the complete functionality of the 
+            <strong>M.A.B.I.T.E cognitive assessment system</strong>. The video showcases
+            all implemented mini-games and their interaction within the unified menu-driven
+            interface.
+          </div>
 
-<!--End BibTex citation -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code> Commingh Soon...
-</code></pre>
+          <div class="content has-text-justified" style="margin-top: 15px;">
+            The demonstration includes:
+            <ul>
+              <li><strong>Simon Says:</strong> memory-based sequence reproduction using LEDs and buttons.</li>
+              <li><strong>10-Second Timer Challenge:</strong> evaluation of time perception accuracy.</li>
+              <li><strong>Reflex Challenge:</strong> measurement of reaction speed through LED stimuli.</li>
+              
+            </ul>
+          </div>
+
+          <div style="text-align: center; margin-top: 30px;">
+            <video controls
+              style="width: 100%; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+              <source src="static/videos/mabite_demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="content has-text-justified" style="margin-top: 20px;">
+            This demonstration highlights the coherence between the different games, the
+            consistency of user interaction, and the use of multimodal feedback to create
+            a complete and engaging cognitive testing environment.
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
 
 
 
