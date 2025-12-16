@@ -75,7 +75,7 @@ The gray button confirms the selection.
 ---
 
 ## 5. Simon Says Game (Memory Challenge)  
-### *Implemented by the author*
+### *Implemented by the me*
 
 ### 5.1 Educational Objective
 
