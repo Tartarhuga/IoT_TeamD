@@ -100,53 +100,25 @@ The difficulty increases progressively by extending the sequence length after ea
 
 ### 5.3 Simon Says – Functional Flow Diagram
 
-┌───────────────┐
-│ Start Simon │
-└───────┬───────┘
-│
-▼
-┌─────────────────────┐
-│ Initialize score │
-│ Clear sequence │
-└───────┬─────────────┘
-│
-▼
-┌─────────────────────┐
-│ Add random LED │
-│ to sequence │
-└───────┬─────────────┘
-│
-▼
-┌─────────────────────┐
-│ Play LED + sound │
-│ sequence │
-└───────┬─────────────┘
-│
-▼
-┌─────────────────────┐
-│ Player inputs │
-│ sequence │
-└───────┬─────────────┘
-│
-┌─────┴─────┐
-│ Correct ? │
-└─────┬─────┘
-│Yes
-▼
-┌─────────────────────┐
-│ Increase score │
-│ Level-up sound │
-└───────┬─────────────┘
-│
-└───► Loop to add next LED
-     No
-     ▼
-┌─────────────────────┐
-│ Game Over │
-│ Display score │
-└─────────────────────┘
+Start Simon game
+→ Initialize game variables (score reset, sequence cleared, random seed initialization)
+→ Add one random LED to the sequence
+→ Play the complete LED and sound sequence
+→ Wait for player input
 
----
+→ Compare player input with expected sequence
+ → If the input is correct
+  → Increase the score
+  → Play level-up sound
+  → Repeat from “Add one random LED to the sequence”
+
+ → If the input is incorrect
+  → End the game
+  → Display “Game Over” message
+  → Display final score
+  → Update best score if applicable
+
+→ Return to menu
 
 ### 5.4 Key Functions Explanation
 
@@ -226,5 +198,5 @@ The Simon Says game highlights the integration of hardware control, user interac
 
 ## Author
 
-Developed as part of an academic embedded systems project.  
+Developed as part of an academic IOT project.  
 Simon Says game implementation by **FranklinTheTeamLead**.
